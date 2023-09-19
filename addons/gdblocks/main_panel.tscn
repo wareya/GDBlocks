@@ -148,6 +148,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_50xvc")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_50xvc")
 
 [node name="GDBlockField" type="Control"]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -164,11 +165,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hsyit")
-expand_mode = 1
 
-[node name="Field" type="Node2D" parent="."]
+[node name="Field" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="AddBlock3" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+layout_mode = 0
 offset_left = 203.0
 offset_top = 56.0
 offset_right = 383.0
@@ -205,6 +213,7 @@ placeholder_text = "0"
 alignment = 2
 
 [node name="AddBlock2" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+layout_mode = 0
 offset_left = 458.0
 offset_top = 76.0
 offset_right = 638.0
@@ -241,6 +250,7 @@ placeholder_text = "0"
 alignment = 2
 
 [node name="AddBlock" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+layout_mode = 0
 offset_left = 151.0
 offset_top = 103.0
 offset_right = 331.0
@@ -276,6 +286,7 @@ placeholder_text = "0"
 alignment = 2
 
 [node name="AddBlock4" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+layout_mode = 0
 offset_left = 292.0
 offset_top = 189.0
 offset_right = 472.0

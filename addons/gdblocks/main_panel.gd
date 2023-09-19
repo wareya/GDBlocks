@@ -15,11 +15,12 @@ func _gui_input(event : InputEvent) -> void:
     if event is InputEventMouseButton and (event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
         var up = event.button_index == MOUSE_BUTTON_WHEEL_UP
         var scaler = pow(2.0, 0.25 if up else -0.25)
-        var xform = Transform2D()
+        var xform = Transform2D(0, $Field.scale, 0.0, $Field.position)
         xform = Transform2D().translated(-event.position) * xform
         xform = Transform2D().scaled(Vector2.ONE*scaler) * xform
         xform = Transform2D().translated(event.position) * xform
-        $Field.transform = xform * $Field.transform
+        $Field.position = xform.origin
+        $Field.scale = xform.get_scale()
         if $Field.scale.distance_to(Vector2.ONE) < 0.1:
             $Field.scale = Vector2.ONE
             $Field.position = $Field.position.round()
@@ -31,6 +32,11 @@ func _process(delta: float) -> void:
     anchor_right = 1
     offset_bottom = 0
     offset_right = 0
+    
+    $Field.anchor_bottom = 1
+    $Field.anchor_right = 1
+    $Field.offset_bottom = 0
+    $Field.offset_right = 0
     
     var clusters = {}
     var children : Array = $Field.get_children()

@@ -71,6 +71,8 @@ func _process(delta: float) -> void:
         for _other in get_tree().get_nodes_in_group("CodeBlocks"):
             if _other == self:
                 continue
+            if _other.get_parent() != get_parent():
+                continue
             var other = _other as Control
             var end_point = other.position + Vector2(0, other.calculate_next_height())
             var dist = ((end_point - position)*Vector2(0.5,1.0)).length()
