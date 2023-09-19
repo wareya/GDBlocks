@@ -5,11 +5,23 @@ extends Control
 func _ready() -> void:
     pass # Replace with function body.
 
-@export_node_path var expr_component_1 = null
-@export_node_path var expr_component_2 = null
+@export_node_path var expr_component_1 = null # TODO
+@export_node_path var expr_component_2 = null # TODO
+var expr_block_1 = null # TODO
+var expr_block_2 = null # TODO
 
+const inner_left_padding = 12
+
+@export var top_level_only = false # TODO
+@export var supports_next = false # TODO
+@export var supports_inner = false
+
+var previous : Control = null
+var next : Control = null
+var inner : Control = null
 
 var dragging = false
+
 func _gui_input(event : InputEvent) -> void:
     if event is InputEventMouse:
         dragging = event.button_mask & MOUSE_BUTTON_MASK_LEFT
@@ -50,8 +62,6 @@ func _gui_input(event : InputEvent) -> void:
         #print(event)
         translate(event.relative)
     pass
-
-@export var supports_inner = false
 
 func translate(amount : Vector2):
     position += amount
@@ -130,12 +140,6 @@ func calculate_total_height():
     if next:
         total += next.calculate_total_height()
     return total
-
-const inner_left_padding = 12
-
-var previous : Control = null
-var next : Control = null
-var inner : Control = null
 
 func set_final_next(other):
     if next:

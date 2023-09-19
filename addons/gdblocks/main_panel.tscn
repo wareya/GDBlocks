@@ -183,6 +183,8 @@ offset_right = 383.0
 offset_bottom = 95.0
 theme = SubResource("Theme_ok3j4")
 script = ExtResource("3_x2lob")
+top_level_only = null
+supports_next = null
 supports_inner = null
 
 [node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock3"]
@@ -220,6 +222,8 @@ offset_right = 638.0
 offset_bottom = 115.0
 theme = SubResource("Theme_3n0bv")
 script = ExtResource("3_x2lob")
+top_level_only = null
+supports_next = null
 supports_inner = null
 
 [node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock2"]
@@ -257,6 +261,10 @@ offset_right = 331.0
 offset_bottom = 142.0
 theme = SubResource("Theme_3n0bv")
 script = ExtResource("3_x2lob")
+expr_component_1 = NodePath("MarginContainer/HBoxContainer/LineEdit")
+expr_component_2 = NodePath("MarginContainer/HBoxContainer/LineEdit2")
+top_level_only = null
+supports_next = null
 
 [node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock"]
 layout_mode = 2
@@ -293,6 +301,8 @@ offset_right = 472.0
 offset_bottom = 228.0
 theme = SubResource("Theme_3n0bv")
 script = ExtResource("3_x2lob")
+top_level_only = null
+supports_next = null
 
 [node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock4"]
 layout_mode = 2
@@ -330,6 +340,8 @@ offset_right = 728.0
 offset_bottom = 255.0
 theme = SubResource("Theme_7cnvs")
 script = ExtResource("3_x2lob")
+top_level_only = null
+supports_next = null
 supports_inner = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Field/GroupBlock"]
@@ -381,6 +393,8 @@ offset_right = 495.0
 offset_bottom = 325.0
 theme = SubResource("Theme_7cnvs")
 script = ExtResource("3_x2lob")
+top_level_only = null
+supports_next = null
 supports_inner = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Field/GroupBlock2"]
