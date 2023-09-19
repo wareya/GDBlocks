@@ -1,0 +1,413 @@
+[gd_scene load_steps=16 format=3 uid="uid://bq74chxbdpv4n"]
+
+[ext_resource type="Script" path="res://addons/gdblocks/main_panel.gd" id="1_ceufe"]
+[ext_resource type="Texture2D" uid="uid://ctc26rc4h22xf" path="res://icon.svg" id="2_hsyit"]
+[ext_resource type="Script" path="res://addons/gdblocks/AddBlock.gd" id="3_x2lob"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkwmf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.439216, 0.709804, 0.831373, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.145098, 0.117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="FontVariation" id="FontVariation_kkqjm"]
+
+[sub_resource type="Theme" id="Theme_ok3j4"]
+default_font = SubResource("FontVariation_kkqjm")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 12
+MarginContainer/constants/margin_top = 4
+Panel/styles/panel = SubResource("StyleBoxFlat_lkwmf")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_lkwmf")
+
+[sub_resource type="Gradient" id="Gradient_vi8ea"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.192308)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dkr6d"]
+gradient = SubResource("Gradient_vi8ea")
+width = 16
+height = 23
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.538462, 0.568376)
+repeat = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqt6m"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1rss"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wd01"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.3)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nq8dj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.188235, 0.443137, 0.709804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.145098, 0.117647, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Theme" id="Theme_3n0bv"]
+default_font = SubResource("FontVariation_kkqjm")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_aqt6m")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_a1rss")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_4wd01")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+Panel/styles/panel = SubResource("StyleBoxFlat_nq8dj")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_nq8dj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50xvc"]
+content_margin_left = 0.0
+content_margin_top = 1.0
+content_margin_right = 0.0
+content_margin_bottom = 1.0
+bg_color = Color(0.921569, 0.760784, 0.341176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.145098, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Theme" id="Theme_7cnvs"]
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+Panel/styles/panel = SubResource("StyleBoxFlat_50xvc")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_50xvc")
+
+[node name="GDBlockField" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ceufe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hsyit")
+expand_mode = 1
+
+[node name="Field" type="Node2D" parent="."]
+
+[node name="AddBlock3" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+offset_left = 203.0
+offset_top = 56.0
+offset_right = 383.0
+offset_bottom = 95.0
+theme = SubResource("Theme_ok3j4")
+script = ExtResource("3_x2lob")
+supports_inner = null
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock3"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/AddBlock3/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/AddBlock3/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/AddBlock3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/AddBlock3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/AddBlock3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="AddBlock2" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+offset_left = 458.0
+offset_top = 76.0
+offset_right = 638.0
+offset_bottom = 115.0
+theme = SubResource("Theme_3n0bv")
+script = ExtResource("3_x2lob")
+supports_inner = null
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/AddBlock2/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/AddBlock2/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/AddBlock2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/AddBlock2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/AddBlock2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="AddBlock" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+offset_left = 151.0
+offset_top = 103.0
+offset_right = 331.0
+offset_bottom = 142.0
+theme = SubResource("Theme_3n0bv")
+script = ExtResource("3_x2lob")
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/AddBlock/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/AddBlock/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/AddBlock/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/AddBlock/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/AddBlock/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="AddBlock4" type="PanelContainer" parent="Field" groups=["CodeBlocks"]]
+offset_left = 292.0
+offset_top = 189.0
+offset_right = 472.0
+offset_bottom = 228.0
+theme = SubResource("Theme_3n0bv")
+script = ExtResource("3_x2lob")
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/AddBlock4"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/AddBlock4/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/AddBlock4/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/AddBlock4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/AddBlock4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/AddBlock4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="GroupBlock" type="Control" parent="Field" groups=["CodeBlocks", "GroupBlock"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 548.0
+offset_top = 216.0
+offset_right = 728.0
+offset_bottom = 255.0
+theme = SubResource("Theme_7cnvs")
+script = ExtResource("3_x2lob")
+supports_inner = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Field/GroupBlock"]
+layout_mode = 2
+offset_right = 180.0
+offset_bottom = 39.0
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/GroupBlock/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/GroupBlock/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/GroupBlock/PanelContainer/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/GroupBlock/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/GroupBlock/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/GroupBlock/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="BottomPanel" type="Panel" parent="Field/GroupBlock"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+offset_top = 39.0
+offset_right = 180.0
+offset_bottom = 47.0
+
+[node name="GroupBlock2" type="Control" parent="Field" groups=["CodeBlocks", "GroupBlock"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 315.0
+offset_top = 286.0
+offset_right = 495.0
+offset_bottom = 325.0
+theme = SubResource("Theme_7cnvs")
+script = ExtResource("3_x2lob")
+supports_inner = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Field/GroupBlock2"]
+layout_mode = 2
+offset_right = 180.0
+offset_bottom = 39.0
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Field/GroupBlock2/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/GroupBlock2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Field/GroupBlock2/PanelContainer/MarginContainer/HBoxContainer" groups=["GDBlockNode"]]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_dkr6d")
+stretch_mode = 3
+
+[node name="LineEdit" type="LineEdit" parent="Field/GroupBlock2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="Label" type="Label" parent="Field/GroupBlock2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="LineEdit2" type="LineEdit" parent="Field/GroupBlock2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1234"
+placeholder_text = "0"
+alignment = 2
+
+[node name="BottomPanel" type="Panel" parent="Field/GroupBlock2"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+offset_top = 39.0
+offset_right = 180.0
+offset_bottom = 47.0
